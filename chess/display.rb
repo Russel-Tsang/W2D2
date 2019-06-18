@@ -14,10 +14,11 @@ class Display
     @board.board.each_with_index do |row, row_i|
       temp_row = []
       row.each_with_index do |square, i|
+        bg = 
           if i.even?
-            temp_row << 'X'.blue 
+            temp_row << ' X '.colorize( :background => :blue)
           else
-            temp_row << 'X'.red
+            temp_row << ' X '.colorize( :background => :red)
           end        
       end
       if row_i.even?
